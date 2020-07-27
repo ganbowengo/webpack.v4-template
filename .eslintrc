@@ -1,0 +1,28 @@
+{
+	"root": true,
+	"extends": "standard",
+	"parserOptions": {
+		"parser": "babel-eslint"
+	},
+	"parser": "vue-eslint-parser",
+	"env": {
+		"browser": true
+	},
+	"plugins": ["html"],
+	"rules": {
+		"semi": "off",
+		"no-new": "off",
+		"no-tabs": "off",
+		"no-control-regex": "off",
+		"indent": ["error", 4],
+		"prefer-const": 0,
+		"space-before-function-paren": "off"
+	},
+	"globals": {
+		"$": true,
+		"dict": true,
+		"request": true,
+		"_isCancelKeydown": true,
+		"log": true
+	}
+}
