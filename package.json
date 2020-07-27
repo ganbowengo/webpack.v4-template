@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
-	"repository": "",
+	"repository": "https://github.com/ganbowengo/webpack.v4-template.git",
 	"author": "ganbowen",
 	"license": "MIT",
 	"scripts": {
