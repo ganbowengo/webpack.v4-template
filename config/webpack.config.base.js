@@ -3,7 +3,7 @@
  * @Author: ganbowen
  * @Date: 2020-03-25 09:38:34
  * @LastEditors: ganbowen
- * @LastEditTime: 2020-07-27 16:04:56
+ * @LastEditTime: 2020-08-18 16:04:45
  */
 const conf = require('./utils')
 const fs = require('fs')
@@ -26,6 +26,8 @@ let entrys, html, creatHappypack, cssLoader
         files.forEach(filename => {
             map[filename] = ['@babel/polyfill', conf.join(`../src/module/${filename}/index.js`)]
         })
+        // 动态添加 map.file = 'url'
+        // map.file 加入到出口的chunks数组中
         return map
     }
 
@@ -35,7 +37,8 @@ let entrys, html, creatHappypack, cssLoader
             title: `--${filename.toUpperCase()}--`,
             template: 'index.html',
             filename: `${filename}.html`,
-            chunks: ['common', 'manifest', 'vendor', filename]
+            chunks: ['common', 'manifest', 'vendor', filename],
+            chunksSortMode: "manual" // 保持chunks加载顺序
         })
     })
 
