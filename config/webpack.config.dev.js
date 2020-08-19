@@ -3,7 +3,7 @@
  * @Author: ganbowen
  * @Date: 2020-03-25 09:38:48
  * @LastEditors: ganbowen
- * @LastEditTime: 2020-05-25 11:22:13
+ * @LastEditTime: 2020-08-19 15:16:45
  */
 
 'use strict'
@@ -24,7 +24,7 @@ module.exports = merge(baseConfig, {
         clientLogLevel: 'warning',
         inline: true,
         hot: true,
-        openPage: 'billing.html',
+        openPage: 'example.html',
         disableHostCheck: true
     },
     module: {

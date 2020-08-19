@@ -3,7 +3,7 @@
  * @Author: ganbowen
  * @Date: 2020-03-25 09:38:34
  * @LastEditors: ganbowen
- * @LastEditTime: 2020-08-18 16:04:45
+ * @LastEditTime: 2020-08-19 10:50:44
  */
 const conf = require('./utils')
 const fs = require('fs')
@@ -14,6 +14,8 @@ const HappyPack = require('happypack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin') // css分离打包处理
+const chalk = require('chalk')
+const ProgressBarPlugin = require('progress-bar-webpack-plugin')
 const happyThreadPool = HappyPack.ThreadPool({ size: os.cpus().length }) // 获取cpu数量
 
 let entrys, html, creatHappypack, cssLoader
@@ -38,7 +40,7 @@ let entrys, html, creatHappypack, cssLoader
             template: 'index.html',
             filename: `${filename}.html`,
             chunks: ['common', 'manifest', 'vendor', filename],
-            chunksSortMode: "manual" // 保持chunks加载顺序
+            chunksSortMode: 'manual' // 保持chunks加载顺序
         })
     })
 
@@ -121,11 +123,9 @@ module.exports = {
     plugins: [
         ...html,
         new VueLoaderPlugin(),
-        // new HappyPack({
-        //     id: 'js',
-        //     loaders: ['babel-loader?cacheDirectory=true'],
-        //     threadPool: happyThreadPool
-        // }),
+        new ProgressBarPlugin({
+            format: '  build [:bar] ' + chalk.green.bold(':percent') + ' (:elapsed seconds)'
+        }),
         creatHappypack('js', ['babel-loader?cacheDirectory=true']),
         creatHappypack('vue', ['babel-loader?cacheDirectory=true']),
         creatHappypack('css', ['vue-style-loader', 'css-loader']),

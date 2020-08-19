@@ -3,13 +3,13 @@
  * @Author: ganbowen
  * @Date: 2020-04-03 16:15:33
  * @LastEditors: ganbowen
- * @LastEditTime: 2020-07-27 15:59:41
+ * @LastEditTime: 2020-08-19 11:05:35
  */
 import Vue from 'vue'
-import { Confirm, Loading } from 'element-ui'
+import { Message, Loading } from 'element-ui'
 import { isObject, isString } from '../../utils/tools'
 
-Vue.prototype.$Confirm = Confirm
+Vue.prototype.$Confirm = Message
 Vue.prototype.$Loading = Loading
 const VUE_UI_OBJ = new Vue()
 
