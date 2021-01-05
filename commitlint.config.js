@@ -3,7 +3,7 @@
  * @Author: ganbowen
  * @Date: 2021-01-05 09:35:14
  * @LastEditors: ganbowen
- * @LastEditTime: 2021-01-05 16:47:52
+ * @LastEditTime: 2021-01-05 16:50:03
  */
 // feat ：新功能
 // fix ：修复 bug
@@ -15,6 +15,7 @@
 // revert ：撤回提交
 // test ：添加或修正测试
 // merge ：merge代码、解决冲突
+// git commit -m 'feat: add list'
 module.exports = {
     extends: ['@commitlint/config-conventional'],
     rules: {
