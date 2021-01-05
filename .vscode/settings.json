@@ -1,0 +1,21 @@
+{
+    "path-autocomplete.excludedItems": {
+        "**/.DS_Store": {
+            "when": "**"
+        },
+        "**/*.md": {
+            "when": "**"
+        }
+    },
+    "path-autocomplete.pathMappings": {
+        "@": "${folder}/src",
+        "@public": "${folder}/public",
+        "&": "${folder}/src/public"
+    },
+    "path-intellisense.absolutePathToWorkspace": true,
+    "path-intellisense.mappings": {
+        "@": "${workspaceRoot}/src",
+        "@public": "${workspaceRoot}/public",
+        "&": "${workspaceRoot}/src/public"
+    }
+}
