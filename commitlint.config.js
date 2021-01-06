@@ -3,7 +3,7 @@
  * @Author: ganbowen
  * @Date: 2021-01-05 09:35:14
  * @LastEditors: ganbowen
- * @LastEditTime: 2021-01-05 16:50:03
+ * @LastEditTime: 2021-01-06 10:38:18
  */
 // feat ：新功能
 // fix ：修复 bug
@@ -19,18 +19,18 @@
 module.exports = {
     extends: ['@commitlint/config-conventional'],
     rules: {
-        'type-enum': [2, 'always', [
-            'chore',
-            'docs',
-            'feat',
-            'fix',
-            'perf',
-            'refactor',
-            'revert',
-            'style',
-            'test',
-            'merge',
-            'config'
-        ]]
+        // 'type-enum': [2, 'always', [
+        //     'chore',
+        //     'docs',
+        //     'feat',
+        //     'fix',
+        //     'perf',
+        //     'refactor',
+        //     'revert',
+        //     'style',
+        //     'test',
+        //     'merge',
+        //     'config'
+        // ]]
     }
 }
