@@ -3,7 +3,7 @@
  * @Author: ganbowen
  * @Date: 2021-01-06 10:30:17
  * @LastEditors: ganbowen
- * @LastEditTime: 2021-01-06 10:35:33
+ * @LastEditTime: 2021-01-06 11:13:24
  */
 module.exports = {
     // type 类型
@@ -38,6 +38,7 @@ module.exports = {
     // 覆写提示的信息
     messages: {
         type: "选择你要提交的类型:",
+        scope: '选择一个 scope (可选):',
         subject: '填写一个简短精炼的描述语句:\n',
         body: '添加一个更加详细的描述，可以附上新增功能的描述或 bug 链接、截图链接 (可选)。使用 "|" 换行:\n',
         breaking: '列举非兼容性重大的变更 (可选):\n',
@@ -46,4 +47,6 @@ module.exports = {
     },
     // subject 限制长度
     subjectLimit: 100,
+    // 跳过问题
+    skipQuestions: ['scope', 'body']
 };
