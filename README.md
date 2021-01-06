@@ -3,7 +3,7 @@
  * @Author: ganbowen
  * @Date: 2020-03-26 18:39:34
  * @LastEditors: ganbowen
- * @LastEditTime: 2021-01-06 10:28:10
+ * @LastEditTime: 2021-01-06 11:03:41
  -->
 
 ## Build Setup
@@ -62,4 +62,20 @@ npm run test
         -- js                      # 全局API公用资源目录
         -- utils                   # 全局工具类函数、js类库资源目录
 -- index.html                      # 项目HTML模板文件
+```
+##### 配置commitizen
+```bash
+# commitizen 支持commit提示 
+# cz-customizable 支持commit中文提示 
+# @commitlint/config-conventional @commitlint/cli 支持commit message校验 
+# husky 支持git hooks 触发git事件
+npm install --save-dev commitizen cz-customizable @commitlint/config-conventional @commitlint/cli husky
+
+# 项目内初始化 cz-customizable 适配器
+npx commitizen init cz-customizable --save-dev --save-exact --force
+
+# 额外配置文件 .cz-config.js commitlint.config.js
+# git hooks 中添加 "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true", 
+# 设置无感知触发 git cz
+
 ```
