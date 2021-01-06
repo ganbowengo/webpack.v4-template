@@ -3,7 +3,7 @@
  * @Author: ganbowen
  * @Date: 2020-03-26 18:39:34
  * @LastEditors: ganbowen
- * @LastEditTime: 2021-01-06 11:03:41
+ * @LastEditTime: 2021-01-06 13:49:52
  -->
 
 ## Build Setup
@@ -63,7 +63,19 @@ npm run test
         -- utils                   # 全局工具类函数、js类库资源目录
 -- index.html                      # 项目HTML模板文件
 ```
+##### 配置Jest
+[vue 配置Jest官方文档](https://vue-test-utils.vuejs.org/zh/installation/)
+```bash
+# 安装jest @vue/test-utils vue-jest
+npm install --save-dev jest @vue/test-utils vue-jest
+
+# 配置jest.config.js
+# 配置.babelrc @babel/preset-env中的转义模块 jest运行在node环境 该配置将跳过不必要转义的模块 提升测试执行效率
+
+```
+
 ##### 配置commitizen
+[配置commitizen参考文档](https://segmentfault.com/a/1190000023388007)
 ```bash
 # commitizen 支持commit提示 
 # cz-customizable 支持commit中文提示 

@@ -3,10 +3,11 @@
  * @Author: ganbowen
  * @Date: 2021-01-05 17:02:53
  * @LastEditors: ganbowen
- * @LastEditTime: 2021-01-06 10:27:14
+ * @LastEditTime: 2021-01-06 13:51:09
  */
 
 module.exports = {
+    // 包含的测试文件后缀
     moduleFileExtensions: [
         'js',
         'jsx',
@@ -20,6 +21,7 @@ module.exports = {
         '^&/(.*)$': '<rootDir>/src/public/$1',
         '^@public/(.*)$': '<rootDir>/public/$1'
     },
+    // 匹配对应的测试babel处理
     transform: {
         // 用 `vue-jest` 处理 `*.vue` 文件
         '.*\\.(vue)$': 'vue-jest',
