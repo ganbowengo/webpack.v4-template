@@ -1,9 +1,9 @@
 /*
- * @Descripttion:
+ * @Descripttion: jest 配置文件
  * @Author: ganbowen
  * @Date: 2021-01-05 17:02:53
  * @LastEditors: ganbowen
- * @LastEditTime: 2021-01-05 18:04:53
+ * @LastEditTime: 2021-01-06 10:27:14
  */
 
 module.exports = {
