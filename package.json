@@ -87,6 +87,9 @@
         "webpack-merge": "^4.2.1",
         "yarn": "^1.16.0"
     },
+    "engines": {
+        "node": ">= 10.17.0"
+    },
     "husky": {
         "hooks": {
             "pre-commit": "lint-staged",

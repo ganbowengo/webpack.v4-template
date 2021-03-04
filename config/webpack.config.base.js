@@ -2,8 +2,8 @@
  * @Descripttion:
  * @Author: ganbowen
  * @Date: 2020-03-25 09:38:34
- * @LastEditors: ganbowen
- * @LastEditTime: 2020-08-19 10:50:44
+ * @LastEditors  : ganbowen
+ * @LastEditTime : 2021-03-04 11:19:22
  */
 const conf = require('./utils')
 const fs = require('fs')
@@ -20,11 +20,11 @@ const happyThreadPool = HappyPack.ThreadPool({ size: os.cpus().length }) // 获�
 
 let entrys, html, creatHappypack, cssLoader
 {
-    let files = fs.readdirSync(resolve('src/module'))
+    const files = fs.readdirSync(resolve('src/module'))
 
     // 设置所有的入口
     entrys = () => {
-        let map = {}
+        const map = {}
         files.forEach(filename => {
             map[filename] = ['@babel/polyfill', conf.join(`../src/module/${filename}/index.js`)]
         })

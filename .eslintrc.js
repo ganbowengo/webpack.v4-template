@@ -2,7 +2,7 @@
  * @Author       : ganbowen
  * @Date         : 2020-07-27 15:40:39
  * @LastEditors  : ganbowen
- * @LastEditTime : 2021-03-04 10:31:30
+ * @LastEditTime : 2021-03-04 11:16:21
  * @Descripttion :
  */
 module.exports = {
@@ -23,9 +23,11 @@ module.exports = {
         'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
         'space-before-function-paren': ['error', 'always'], // 括号之前有空格
         quotes: ['error', 'single'], // 使用单引号
-        indent: ['error', 4], // js tab size (包含 .vue 的 script)
         'vue/html-indent': ['error', 4], // template 格式化 tab size
-        'vue/script-indent': ['error', 4] // script 格式化 tab size
+        'vue/script-indent': ['error', 4], // script 格式化 tab size
+        // #issue Cannot read property ‘range’ of null babel-eslint版本问题 兼容解决方案
+        "template-curly-spacing" : "off",
+        indent: ['error', 4, { ignoredNodes: ['TemplateLiteral'] }] // js tab size (包含 .vue 的 script)
     },
     globals: {
         "$": true,
