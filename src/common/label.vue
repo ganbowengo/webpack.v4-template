@@ -3,7 +3,7 @@
  * @Author: ganbowen
  * @Date: 2020-04-01 10:34:33
  * @LastEditors  : ganbowen
- * @LastEditTime : 2021-03-03 18:13:29
+ * @LastEditTime : 2021-03-04 13:46:20
  -->
 <template>
     <div :class="['label-temp', 'clearfloat','label-temp-' + type ]">
@@ -19,8 +19,7 @@
             v-if="showIcon"
             class="label-temp-icon"
             :class="iconClass"
-            @click="handleClick"
-        />
+            @click="handleClick" />
     </div>
 </template>
 
