@@ -2,8 +2,8 @@
  * @Descripttion: main
  * @Author: ganbowen
  * @Date: 2020-03-25 09:40:40
- * @LastEditors: ganbowen
- * @LastEditTime: 2020-08-19 11:06:35
+ * @LastEditors  : ganbowen
+ * @LastEditTime : 2021-03-04 10:00:27
  */
 
 import Vue from 'vue'
@@ -23,13 +23,12 @@ import initCommonUi from '@/common'
 // ...
 
 Vue.use(Input)
-Vue.use(Option)
 Vue.use(vuescroll)
 Vue.prototype.$vuescrollConfig = {
     bar: {
         background: '#000'
     }
-};
+}
 
 initCommonUi(Vue)
 export default new Vue({

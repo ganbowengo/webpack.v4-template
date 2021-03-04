@@ -1,8 +1,8 @@
 // billing 模块 element-ui 库 样式按需引入
 
-/*icon字体路径变量*/
+/* icon字体路径变量 */
 $--font-path: "~element-ui/lib/theme-chalk/fonts";
 
-/*按需引入用到的组件的scss文件和基础scss文件*/
+/* 按需引入用到的组件的scss文件和基础scss文件 */
 @import "~element-ui/packages/theme-chalk/src/base.scss";
 @import "~element-ui/packages/theme-chalk/src/input.scss";

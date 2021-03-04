@@ -2,8 +2,8 @@
  * @Descripttion:
  * @Author: ganbowen
  * @Date: 2020-03-26 18:39:34
- * @LastEditors: ganbowen
- * @LastEditTime: 2021-01-06 13:49:52
+ * @LastEditors  : ganbowen
+ * @LastEditTime : 2021-03-04 10:25:32
  -->
 
 ## Build Setup
@@ -43,6 +43,9 @@ npm run test
 
 ```bash
 # Project architecture
+-- .vscode                         # vscode格式化及eslint相关配置文件
+    -- extensions.json             # 项目级配置相关插件
+    -- settings.json               # 项目级vscode配置
 -- config                          # 项目配置文件
     -- webpack.config.dev          # 开发webpack配置
     -- webpack.config.pro          # 生产webpack配置
@@ -63,6 +66,19 @@ npm run test
         -- utils                   # 全局工具类函数、js类库资源目录
 -- index.html                      # 项目HTML模板文件
 ```
+
+
+##### 配置ESlint\stylelint
+```bash
+# 安装下列插件
+npm install --save-dev eslint babel-eslint eslint-loader eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-standard eslint-plugin-vue eslint-friendly-formatter eslint-config-standard
+
+# 配置.eslintrc.js、.stylelintrc.js
+# 配置项目编译时使用eslint-loader\eslint-friendly-formatter将eslint的错误信息出现在终端
+# 配置.vscode 下的extensions、settings 根据vscode提示安装扩展插件
+
+```
+
 ##### 配置Jest
 [vue 配置Jest官方文档](https://vue-test-utils.vuejs.org/zh/installation/)
 ```bash
@@ -77,9 +93,9 @@ npm install --save-dev jest @vue/test-utils vue-jest
 ##### 配置commitizen
 [配置commitizen参考文档](https://segmentfault.com/a/1190000023388007)
 ```bash
-# commitizen 支持commit提示 
-# cz-customizable 支持commit中文提示 
-# @commitlint/config-conventional @commitlint/cli 支持commit message校验 
+# commitizen 支持commit提示
+# cz-customizable 支持commit中文提示
+# @commitlint/config-conventional @commitlint/cli 支持commit message校验
 # husky 支持git hooks 触发git事件
 npm install --save-dev commitizen cz-customizable @commitlint/config-conventional @commitlint/cli husky
 
@@ -87,7 +103,7 @@ npm install --save-dev commitizen cz-customizable @commitlint/config-conventiona
 npx commitizen init cz-customizable --save-dev --save-exact --force
 
 # 额外配置文件 .cz-config.js commitlint.config.js
-# git hooks 中添加 "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true", 
+# git hooks 中添加 "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
 # 设置无感知触发 git cz
 
 ```

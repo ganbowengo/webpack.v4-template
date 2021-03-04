@@ -1,0 +1,9 @@
+{
+    "recommendations": [ // 安装插件
+        "octref.vetur",
+        "ionutvmi.path-autocomplete", // 配置路径映射
+        "dbaeumer.vscode-eslint", // Eslint
+        "stylelint.vscode-stylelint", // Stylelint
+        "editorconfig.editorconfig" // editorconfig 只控制编辑器的展示效果
+    ]
+}

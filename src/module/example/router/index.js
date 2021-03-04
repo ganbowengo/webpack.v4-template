@@ -2,8 +2,8 @@
  * @Descripttion:
  * @Author: ganbowen
  * @Date: 2020-03-26 11:06:04
- * @LastEditors: ganbowen
- * @LastEditTime: 2020-07-27 15:43:45
+ * @LastEditors  : ganbowen
+ * @LastEditTime : 2021-03-04 10:01:56
  */
 import Vue from 'vue'
 import VueRouter from 'vue-router'

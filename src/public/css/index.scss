@@ -1,17 +1,18 @@
 @charset "UTF-8";
+
 @import "./reset.scss";
 @import "./ui-lib-reset.scss";
 
 .fl {
-	float: left;
+    float: left;
 }
 
 .fr {
-	float: right;
+    float: right;
 }
 
 .clearfloat::after {
-	content: "";
-	display: block;
-	clear: both;
+    display: block;
+    clear: both;
+    content: "";
 }

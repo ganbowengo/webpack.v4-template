@@ -17,5 +17,23 @@
         "@": "${workspaceRoot}/src",
         "@public": "${workspaceRoot}/public",
         "&": "${workspaceRoot}/src/public"
-    }
+    },
+    "editor.formatOnSave": false, // 不启用 vscode 的格式化
+    "editor.codeActionsOnSave": { // 文件保存启用 eslint 自动修复
+        "source.fixAll.eslint": true,
+        "source.fixAll.stylelint": true
+    },
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "vue",
+    ],
+    // "eslint.workingDirectories": [
+    //     "../"
+    // ],
+    // 使用 eslint 进行 .js .vue(template/script) 的代码格式化，关闭 vetur 的 formatter
+    "vetur.format.enable": false,
+    "vetur.validation.template": false,
+    "vetur.validation.script": false,
+    "vetur.validation.style": false
 }

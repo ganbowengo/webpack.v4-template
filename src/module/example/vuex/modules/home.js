@@ -28,8 +28,8 @@ const actions = {
 }
 
 const getters = (function (state) {
-    let obj = {}
-    for (let key in state) {
+    const obj = {}
+    for (const key in state) {
         obj[key] = state => state[key]
     }
     return obj

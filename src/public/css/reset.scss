@@ -77,21 +77,24 @@ mark,
 audio,
 video,
 button {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	user-select: none;
-	font-family: "sans-serif", "微软雅黑", "MicroSoft YaHei", "Helvetica Neue",
-		"Helvetica", "PingFang SC", "Tahoma", "Arial";
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica, Arial, 微软雅黑, Verdana, MicroSoft YaHei, Tahoma, sans-serif;
+    user-select: none;
+    border: 0;
 }
 
 html,
 body {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	vertical-align: middle;
-	user-select: none;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+    color: $black;
+    vertical-align: middle;
+    user-select: none;
+    border: 0;
 }
 
 article,
@@ -104,24 +107,16 @@ header,
 menu,
 nav,
 section {
-	display: block;
-}
-
-html,
-body {
-	height: 100%;
-	width: 100%;
-	font-size: 13px;
-	color: $black;
+    display: block;
 }
 
 pre {
-	white-space: pre-wrap;
-	word-wrap: break-word;
+    word-wrap: break-word;
+    white-space: pre-wrap;
 }
 
 a {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 h1,
@@ -130,64 +125,63 @@ h3,
 h4,
 h5,
 h6 {
-	font-weight: normal;
-	font-size: 100%;
+    font-size: 100%;
+    font-weight: normal;
 }
 
 ol,
 ul {
-	list-style: none;
+    list-style: none;
 }
 
 button,
 input,
 textarea,
 select {
-	outline: none;
-	border: 1px solid #c8c8c8;
-	padding: 5px;
+    padding: 5px;
+    border: 1px solid #c8c8c8;
+    outline: none;
 }
 
 input[type="range"] {
-	padding: 0;
+    padding: 0;
 }
 
 input[type="text"]:focus,
 textarea:focus,
 select:focus {
-	border: 1px solid #53a1f0;
+    border: 1px solid #53a1f0;
 }
 
 input[type="button"],
 button,
-select,
 label {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 input[disabled="disabled"] {
-	cursor: no-drop;
+    cursor: no-drop;
 }
 
 small {
-	font-size: 12px;
+    font-size: 12px;
 }
 
 fieldset,
 img {
-	border: none;
+    border: none;
 }
 
 img {
-	vertical-align: middle;
-	font-size: 0;
+    font-size: 0;
+    vertical-align: middle;
 }
 
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-spacing: 0;
+    border-collapse: collapse;
 }
 
 div {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }

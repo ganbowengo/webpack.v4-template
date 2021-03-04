@@ -2,23 +2,30 @@
  * @Descripttion:
  * @Author: ganbowen
  * @Date: 2020-04-01 10:34:33
- * @LastEditors: ganbowen
- * @LastEditTime: 2020-08-19 10:53:58
+ * @LastEditors  : ganbowen
+ * @LastEditTime : 2021-03-03 18:13:29
  -->
- <template>
+<template>
     <div :class="['label-temp', 'clearfloat','label-temp-' + type ]">
         <div class="label-temp-text">
-            <slot name="label">{{label}}</slot>
+            <slot name="label">
+                {{ label }}
+            </slot>
         </div>
         <div class="label-temp-slot">
-            <slot></slot>
+            <slot />
         </div>
-        <div v-if="showIcon" class="label-temp-icon" :class="iconClass" @click="handleClick"></div>
+        <div
+            v-if="showIcon"
+            class="label-temp-icon"
+            :class="iconClass"
+            @click="handleClick"
+        />
     </div>
 </template>
 
 <script>
-import { oneOf } from '&/utils/tools';
+import { oneOf } from '&/utils/tools'
 export default {
     props: {
         label: {
@@ -27,7 +34,7 @@ export default {
         },
         type: {
             validator (value) {
-                return oneOf(value, ['default', 'border']);
+                return oneOf(value, ['default', 'border'])
             },
             default: 'default'
         },
@@ -42,46 +49,50 @@ export default {
     },
     computed: {
         iconClass () {
-            let classes = [];
+            const classes = []
             if (this.iconType) {
-                classes.push(`label-temp-icon-${this.iconType}`);
+                classes.push(`label-temp-icon-${this.iconType}`)
             }
             return [
                 // 'label-temp-icon',
                 {
                     [`label-temp-icon-${this.iconType}`]: this.iconType
                 }
-            ];
+            ]
         }
     },
     methods: {
         handleClick (e) {
-            this.$emit('on-iconClick', e);
+            this.$emit('on-iconClick', e)
         }
     }
-};
+}
 </script>
 
 <style lang='scss'>
 .label-temp {
-	height: 28px;
-	display: flex;
-	align-items: center;
-	&-border {
-		border: 1px solid $black;
-		background: $white;
-		padding: 0 10px;
-		.el-input__inner {
-			border: 0 !important;
-		}
-	}
-	&-slot {
-		flex: 1;
-	}
-	.label-temp-icon-wj {
-		width: 18px;
-		height: 14px;
-		// background: url('~&/img/wj.png');
-	}
+    display: flex;
+    align-items: center;
+    height: 28px;
+
+    &-border {
+        padding: 0 10px;
+        background: $white;
+        border: 1px solid $black;
+
+        .el-input__inner {
+            border: 0 !important;
+        }
+    }
+
+    &-slot {
+        flex: 1;
+    }
+
+    .label-temp-icon-wj {
+        width: 18px;
+        height: 14px;
+        // background: url('~&/img/wj.png');
+    }
 }
 </style>
